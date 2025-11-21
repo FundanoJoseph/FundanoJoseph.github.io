@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Joseph T. Fundano - Student & Developer</title>
+  <link rel="stylesheet" href="joseph.css" />
+</head>
+<body>
+
+  <header>
+    <div class="profile">
+      <img src="joseph.jpg" alt="Joseph T. Fundano" class="profile-pic" />
+      <div>
+        <h1>Joseph T. Fundano</h1>
+        <p>Student & Aspiring Developer</p>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="abc.html" class="nav-link">KFC Landing Page</a></li>
+        <li><a href="simple website.html" class="nav-link">Simple Website</a></li>
+        <li><a href="Navimenu.html" class="nav-link">Navigation Menu</a></li>
+        <li><a href="bootstrap.html" class="nav-link">Boot Strap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate student and developer focused on creating intuitive and user-friendly digital experiences. I enjoy learning new technologies and building projects that help solve real-world problems.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>UI/UX Design</li>
+        <li>Adobe Photoshop</li>
+      </ul>
+    </section>
+
+    <section id="skills-table">
+      <h2>Skills Table</h2>
+      <table>
+        <tr>
+          <th>Skill</th>
+          <th>Level</th>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td>Advanced</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>Intermediate</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>Intermediate</td>
+        </tr>
+        <tr>
+          <td>React</td>
+          <td>Beginner</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="hobbies">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>🏀 Basketball</li>
+        <li>🎥 Watching Anime and Movies</li>
+        <li>💤 Sleeping</li>
+        <li>🎮 Gaming</li>
+        <li>💃 Dancing</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Project Work</h2>
+      <ul>
+        <li><a href="#">Portfolio Website</a> – Built with HTML, CSS, and JavaScript</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Joseph T. Fundano</p>
+  </footer>
+
+  <script>
+    // Highlight active nav link on scroll
+    const sections = document.querySelectorAll("section, main#home");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "home";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100; // adjust offset for header height
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").substring(1) === current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

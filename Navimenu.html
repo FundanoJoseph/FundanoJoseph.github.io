@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Menus</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.top-links {
+  margin-bottom: 20px;
+}
+.top-links a {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.top-links a:hover {
+  background: #111;
+}
+
+.horizontal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #333;
+  overflow: hidden;
+}
+.horizontal li {
+  float: left;
+}
+.horizontal li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.horizontal li a:hover {
+  background: #111;
+}
+
+.vertical ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background: #333;
+}
+.vertical li a {
+  display: block;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+}
+.vertical li a:hover {
+  background: #111;
+}
+
+.burgery-button {
+  background: #333;
+  color: white;
+  padding: 12px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.burgery-menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #333;
+}
+.burgery-menu li a {
+  display: block;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+}
+.burgery-menu li a:hover {
+  background: #111;
+}
+</style>
+
+<script>
+function toggleBurgery() {
+  var menu = document.getElementById("burgeryMenu");
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+</head>
+
+<body>
+
+<div class="top-links">
+  <a href="joseph.html">Personal Website</a>
+  <a href="abc.html">KFC Landing Page</a>
+  <a href="simple website.html">Simple Website</a>
+  <a href="bootstrap.html">Boot Strap</a>
+</div>
+
+<h2>Horizontal Navigation Menu</h2>
+<nav class="horizontal">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<br><br>
+
+<h2>Vertical Navigation Menu</h2>
+<nav class="vertical">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<br><br>
+
+<h2>Burgery Navigation Menu</h2>
+<button class="burgery-button" onclick="toggleBurgery()">☰ Burgery Menu</button>
+<ul id="burgeryMenu" class="burgery-menu">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+
+</body>
+</html>
